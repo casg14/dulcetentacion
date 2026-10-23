@@ -1,0 +1,876 @@
+/* ==================== FUENTES ==================== */
+
+@font-face {
+
+  font-family:'Playwrite';
+
+  src:url('fonts/PlaywriteArgentina-Regular.woff2') format('woff2'),
+      url('fonts/PlaywriteArgentina-Regular.woff') format('woff');
+
+}
+
+
+/* ==================== RESET ==================== */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+
+/* ==================== BODY ==================== */
+
+body{
+
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background:#f7f4f2;
+  color: #2b2b2b;
+  text-align:center;
+  line-height:1.6;
+  overflow-x: hidden; /* 🔥 MUY IMPORTANTE */
+  font-weight: 450;
+
+}
+
+/* ==================== TITULOS ==================== */
+
+h1{
+
+  font-size:42px;
+  margin-top:10px;
+
+}
+
+h2{
+
+  font-size:36px;
+  margin-bottom:20px;
+
+}
+
+span{
+
+  font-family:'Playwrite';
+  color:#d1826b;
+
+}
+
+
+/* ==================== TRANSICIONES GLOBALES ==================== */
+
+a,
+button,
+.servicio-card,
+.producto-card,
+.btn,
+.btn-instagram,
+.btn-whatsapp{
+
+  transition:all .25s ease;
+
+}
+
+
+/* ==================== HERO ==================== */
+.hero {
+  position: relative;
+  background: #ffffff;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35); /* ajustable según contraste */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  padding: 0 1.5rem;
+}
+
+.hero h1 {
+  color: #2b2b2b;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  color: #2b2b2b;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.hero-btn {
+  padding: 0.8rem 1.8rem;
+  background: white;
+  color: #000;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+}
+.hero-image video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* 🔥 muestra completo */
+  object-position: center;
+  background: #ffffff; /* relleno prolijo si sobra espacio */
+  border-radius: 20px;
+  filter: contrast(1.02) brightness(1.01);
+
+}
+.hero{
+
+  padding:80px 20px;
+
+}
+
+.hero-content{
+
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  gap:40px;
+  align-items:center;
+
+}
+
+.hero-text{
+
+  text-align:center;
+
+}
+
+.hero-logo{
+
+  width:110px;
+  margin-bottom:20px;
+  animation:heroReveal .7s cubic-bezier(.22, 1, .36, 1) both;
+
+}
+
+.hero-text h1{
+  animation:heroReveal .7s .12s cubic-bezier(.22, 1, .36, 1) both;
+}
+
+.hero-text p{
+
+  margin-top:15px;
+  max-width:420px;
+  margin-left:auto;
+  margin-right:auto;
+  animation:heroReveal .7s .24s cubic-bezier(.22, 1, .36, 1) both;
+
+}
+
+.hero-text .btn{
+  animation:heroReveal .7s .36s cubic-bezier(.22, 1, .36, 1) both;
+}
+
+.btn{
+
+  display:inline-block;
+  margin-top:25px;
+  padding:14px 26px;
+  background:#d1826b;
+  color:white;
+  border-radius:30px;
+  text-decoration:none;
+
+}
+
+.btn:hover{
+
+  transform:translateY(-2px);
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+
+}
+
+.hero-image img{
+
+  width:100%;
+  border-radius:14px;
+
+}
+
+.hero-image{
+  width:100%;
+  height:clamp(260px, 42vw, 480px);
+}
+
+.hero-image video{
+  animation:heroReveal .9s .2s cubic-bezier(.22, 1, .36, 1) both;
+}
+
+@keyframes heroReveal{
+  from{
+    opacity:0;
+    transform:translateY(18px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+/* ==================== HERO FLOAT ==================== */
+
+.hero-image img{
+
+  animation:heroFloat 6s ease-in-out infinite;
+
+}
+
+@keyframes heroFloat{
+
+  0%{
+
+    transform:translateY(0px);
+
+  }
+
+  50%{
+
+    transform:translateY(-10px);
+
+  }
+
+  100%{
+
+    transform:translateY(0px);
+
+  }
+
+}
+
+/* ==================== ABOUT ==================== */
+
+.about{
+
+  padding:80px 20px;
+
+}
+
+.about-content{
+
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  gap:40px;
+  align-items:center;
+
+}
+
+.about-text{
+
+  text-align:center;
+
+}
+
+.about-text p{
+
+  margin-top:15px;
+  max-width:520px;
+  margin-left:auto;
+  margin-right:auto;
+
+}
+
+.about-image img{
+
+  width:100%;
+  border-radius:14px;
+
+}
+
+
+/* ==================== SERVICIOS ==================== */
+
+.servicios{
+
+  padding:60px 20px;
+
+}
+
+.servicios-grid{
+
+  display:grid;
+  gap:30px;
+
+}
+
+.servicio-card{
+
+  padding:30px 25px;
+  background:white;
+  border-radius:14px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.06);
+
+}
+
+.servicio-card img{
+
+  width:55px;
+  margin-bottom:15px;
+
+}
+
+.servicio-card h3{
+
+  margin-bottom:10px;
+
+}
+
+.servicio-card:hover{
+
+  transform:translateY(-8px);
+  box-shadow:0 15px 35px rgba(0,0,0,0.12);
+
+}
+
+
+/* ==================== PRODUCTOS ==================== */
+
+.productos{
+
+  padding:60px 20px;
+
+}
+
+.productos-grid{
+
+  display:grid;
+  gap:30px;
+
+}
+
+.producto-card{
+
+  position:relative;
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+
+}
+
+.producto-card img{
+
+  width:100%;
+  display:block;
+
+}
+
+.producto-info{
+
+  position:absolute;
+  bottom:0;
+  width:100%;
+  background:rgba(0,0,0,0.45);
+  color:white;
+  padding:18px;
+
+}
+
+.producto-card:hover{
+
+  transform:translateY(-8px) scale(1.02);
+  box-shadow:0 20px 40px rgba(0,0,0,0.15);
+
+}
+
+
+/* ==================== INSTAGRAM ==================== */
+
+.instagram{
+
+  padding:80px 20px;
+
+}
+
+.instagram-content{
+
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  gap:40px;
+  align-items:center;
+
+}
+
+.instagram-text{
+
+  text-align:center;
+
+}
+
+.instagram-text p{
+
+  margin-top:15px;
+  max-width:420px;
+  margin-left:auto;
+  margin-right:auto;
+
+}
+
+.instagram-phone{
+
+  display:flex;
+  justify-content:center;
+
+}
+
+.instagram-phone img{
+
+  width:50%;
+  max-width:320px;
+  border-radius:30px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.15);
+
+}
+
+.btn-instagram{
+
+  display:inline-block;
+  margin-top:25px;
+  padding:14px 26px;
+  background:#d1826b;
+  color:white;
+  border-radius:30px;
+  text-decoration:none;
+
+}
+
+.btn-instagram:hover{
+
+  transform:translateY(-2px);
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+
+}
+
+
+/* ==================== CTA ==================== */
+
+.cta{
+
+  background:#e7c3ad;
+  padding:80px 20px;
+
+}
+
+.btn-whatsapp{
+
+  display:inline-block;
+  margin-top:25px;
+  padding:16px 30px;
+  background:#d1826b;
+  color:white;
+  border-radius:30px;
+  text-decoration:none;
+
+}
+
+.btn-whatsapp:hover{
+
+  transform:translateY(-2px);
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+
+}
+
+
+/* ==================== FOOTER ==================== */
+
+.footer{
+  padding: 15px;
+  font-size: 12px;
+  background: #f0e8e4;
+}
+
+/* ==================== ANIMACIONES SCROLL ==================== */
+
+.fade-in{
+
+  opacity:0;
+  transform:translateY(22px);
+  transition:opacity .65s ease, transform .65s cubic-bezier(.22, 1, .36, 1);
+  transition-delay:var(--reveal-delay, 0ms);
+
+}
+
+.fade-in.visible{
+
+  opacity:1;
+  transform:translateY(0);
+
+}
+
+
+/* ==================== DESKTOP ==================== */
+
+@media (min-width:768px){
+
+  .hero-content{
+
+    grid-template-columns:1fr 1fr;
+
+  }
+
+  .hero-text{
+
+    text-align:left;
+
+  }
+
+  .hero-text p{
+
+    margin-left:0;
+
+  }
+
+  .about-content{
+
+    grid-template-columns:1fr 1fr;
+
+  }
+
+  .about-text{
+
+    text-align:left;
+
+  }
+
+  .about-text p{
+
+    margin-left:0;
+
+  }
+
+  .servicios-grid{
+
+    grid-template-columns:repeat(3,1fr);
+
+  }
+
+  .productos-grid{
+
+    grid-template-columns:repeat(3,1fr);
+
+  }
+
+  .instagram-content{
+
+    grid-template-columns:1fr 1fr;
+
+  }
+
+  .instagram-text{
+
+    text-align:left;
+
+  }
+
+  .instagram-text p{
+
+    margin-left:0;
+
+  }
+
+}
+
+/* ==================== WHATSAPP FLOTANTE ==================== */
+
+.whatsapp-float{
+
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  width:60px;
+  height:60px;
+  background:#25D366;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+  z-index:999;
+
+}
+
+.whatsapp-float img{
+
+  width:32px;
+
+}
+
+.whatsapp-float:hover{
+
+  transform:scale(1.08);
+  box-shadow:0 12px 30px rgba(0,0,0,0.25);
+
+}
+
+/* ==================== PRODUCTO CAROUSEL ==================== */
+/* ==================== PRODUCTO CAROUSEL (SNAP) ==================== */
+
+.producto-carousel{
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  touch-action: pan-x;
+  height: clamp(320px, 50vw, 550px);/* 🔥 responsive y estable */
+}
+
+.carousel-track{
+  display: flex;
+  width: 100%;
+}
+
+.carousel-track img{
+  width: 100%;
+  height: 100%;
+  flex: 0 0 100%;
+  object-fit: contain; /* 🔥 muestra completa SIN cortar */
+  object-position: center;
+  background: #f7f4f2; /* 🔥 relleno elegante en lugar de blanco */
+
+  scroll-snap-align: center;
+}
+/* ocultar scroll */
+.producto-carousel::-webkit-scrollbar{
+  display: none;
+}
+
+/* botones (igual que tenías) */
+.carousel-btn{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  color: white;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  z-index: 10;
+}
+
+.carousel-btn.prev{ left: 10px; }
+.carousel-btn.next{ right: 10px; }
+
+.carousel-btn:hover{
+  background: rgba(0,0,0,0.6);
+}
+
+/* ==================== NAVBAR ==================== */
+
+.navbar{
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: rgba(247,244,242,0.9);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+.navbar-container{
+  max-width: 1100px;
+  margin: auto;
+  padding: 12px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo{
+  width: 110px;
+}
+
+.nav-links{
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a{
+  text-decoration: none;
+  color: #2b2b2b;
+  font-weight: 500;
+}
+
+.nav-links a:hover{
+  color: #d1826b;
+}
+
+/* mobile */
+
+.menu-toggle{
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+
+a:focus-visible,
+button:focus-visible{
+  outline: 3px solid #8d4935;
+  outline-offset: 3px;
+}
+
+@media (max-width: 768px){
+
+  .nav-links{
+    position: absolute;
+    top: 60px;
+    right: 20px;
+
+    background: white;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 10px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+
+    display: none;
+  }
+
+  .nav-links.active{
+    display: flex;
+  }
+
+  .menu-toggle{
+    display: block;
+  }
+
+}
+
+/* ==================== NAVBAR SCROLL ==================== */
+
+.navbar{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(247,244,242,0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform .4s ease, opacity .4s ease, visibility .4s;
+}
+
+.navbar.show{
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.navbar-container{
+  max-width: 1100px;
+  margin: auto;
+  padding: 12px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo{
+  width: 80px;
+}
+
+@media (prefers-reduced-motion: reduce){
+  *,
+  *::before,
+  *::after{
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ==================== ABOUT CAROUSEL ==================== */
+
+.about-carousel{
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+/* contenedor de imágenes */
+.about-track{
+  display: flex;
+  transition: transform .5s ease;
+}
+
+.about-track img{
+  width: 100%;
+  flex: 0 0 100%;
+
+  height: clamp(260px, 40vw, 420px);
+
+  object-fit: contain; /* 🔥 muestra completa */
+  object-position: center;
+
+  background: #f7f4f2; /* 🔥 rellena elegante */
+}
+
+/* BOTONES */
+
+.about-btn{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  background: rgba(0,0,0,0.4);
+  color: white;
+
+  border: none;
+  width: 36px;
+  height: 36px;
+
+  border-radius: 50%;
+  cursor: pointer;
+
+  font-size: 20px;
+  z-index: 10;
+
+  transition: all .25s ease;
+}
+
+.about-btn:hover{
+  background: rgba(0,0,0,0.6);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.about-btn.prev{ left: 10px; }
+.about-btn.next{ right: 10px; }
